@@ -31,14 +31,15 @@ jobs:
           path: website-config/
     
   Uploading Files To Bucket:
-    docker:
-      - image: circleci/python:3.8
+    executor: aws-cli/default
     steps:
-      - checkout
-      - run:
-          name: Copy files to S3
-          command: |
-            aws s3 cp ./html/ s3://www.rodscloudresume.org --recursive
+     - checkout
+     - aws-cli/setup:
+        profile_name: AdminLTV
+     - run:
+        name: Copy files to S3
+        command: |
+          aws s3 cp .html/ s3://rodscloudresume.org --recursive
 
 workflows:
   version: 2
