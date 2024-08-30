@@ -39,7 +39,7 @@ jobs:
      - run:
         name: Copy files to S3
         command: |
-          aws s3 cp html/ s3://rodscloudresume.org --recursive
+          aws s3 cp html/ s3://rodscloudresume.org --recursive --debug
 
 workflows:
   version: 2
