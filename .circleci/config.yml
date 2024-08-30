@@ -33,8 +33,9 @@ jobs:
     executor: aws-cli/default
     steps:
      - checkout
-     - aws-cli/setup:
-        profile_name: AdminLTV
+     - aws-cli/setup:  # Setup AWS CLI in order to run commands
+        profile_name: AdminLTV 
+        region: us-east-1
      - run:
         name: Copy files to S3
         command: |
