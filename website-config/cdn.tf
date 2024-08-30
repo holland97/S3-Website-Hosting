@@ -20,7 +20,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   comment             = "Some comment"
   default_root_object = "index.html"
 
-   aliases = ["rodscloudresume.org"]
+  aliases = ["rodscloudresume.org"]
 
   default_cache_behavior {
     allowed_methods  = ["GET", "HEAD"]
@@ -96,9 +96,9 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   }
 
   viewer_certificate {
-    acm_certificate_arn = var.certificate-arn #ARN of the certificate I got
-    ssl_support_method = "sni-only"
-    minimum_protocol_version = "TLSv1.2_2021" # Required since using sni-only option
-    cloudfront_default_certificate = false 
+    acm_certificate_arn            = var.certificate-arn #ARN of the certificate I got
+    ssl_support_method             = "sni-only"
+    minimum_protocol_version       = "TLSv1.2_2021" # Required since using sni-only option
+    cloudfront_default_certificate = false
   }
 }
