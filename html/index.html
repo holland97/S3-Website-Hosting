@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roderick Holland's Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8; /* Light gray background for body */
+            color: #333; /* Dark text color */
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+        header {
+            background-color: #003366; /* Dark blue header */
+            color: #ffffff; /* White text */
+            padding: 2em 0;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out; /* Add fade-in animation */
+        }
+        header h1 {
+            font-size: 4em; /* Increased font size for name */
+            margin: 0;
+            animation: bounce 1.5s infinite; /* Add bounce animation */
+        }
+        header p {
+            font-size: 1.2em; /* Slightly larger font size for subtitle */
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            background: #ffffff; /* White background for content */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid #003366; /* Dark blue border */
+        }
+        .contact-info {
+            text-align: right; /* Align contact info to the right */
+            margin-bottom: 20px;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .contact-info a {
+            color: #004080; /* Blue link color */
+            text-decoration: none;
+            transition: color 0.3s; /* Smooth transition for link color */
+        }
+        .contact-info a:hover {
+            color: #003366; /* Darker blue on hover */
+            text-decoration: underline;
+        }
+        h1, h2 {
+            margin: 0;
+            padding: 0;
+            color: #003366; /* Dark blue headings */
+        }
+        .section {
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease-in-out; /* Fade-in effect for sections */
+        }
+        .project, .experience, .skill, .certification, .education {
+            background: #e6f0ff; /* Light blue background for sections */
+            margin: 10px 0;
+            padding: 15px;
+            border-left: 4px solid #003366; /* Dark blue left border for emphasis */
+            transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+            border-radius: 4px; /* Rounded corners for sections */
+        }
+        .project:hover, .experience:hover, .skill:hover, .certification:hover, .education:hover {
+            transform: translateY(-5px); /* Lift effect */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+        }
+        .project h3, .experience h3, .skill h3, .certification h3, .education h3 {
+            margin: 0;
+            color: #003366; /* Dark blue headings */
+        }
+        .project p, .experience p, .skill p, .certification p, .education p {
+            line-height: 1.6;
+        }
+        .github-link, .certification-link {
+            margin-top: 10px;
+        }
+        .github-link img, .certification-link img {
+            width: 36px; /* Increase image size */
+            height: 36px; /* Increase image size */
+            vertical-align: middle;
+            transition: opacity 0.3s; /* Smooth hover effect */
+        }
+        .github-link a, .certification-link a {
+            text-decoration: none;
+            color: #004080; /* Blue link color */
+        }
+        .github-link a:hover img, .certification-link a:hover img {
+            opacity: 0.8; /* Add a hover effect */
+        }
+        .certification img {
+            width: 80px; /* Adjust width as needed */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 10px; /* Space between badge and date */
+        }
+        .project ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .project ul li {
+            margin-bottom: 10px;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Roderick Holland</h1>
+        <p>Roderick Holland</p>
+    </header>
+
+    <div class="container">
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <p>Email: <a href="mailto:holland97@yahoo.com">holland97@yahoo.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/roderick-holland-1862a7173" target="_blank">linkedin.com/in/roderick-holland</a></p>
+            <p>GitHub: <a href="https://github.com/holland97" target="_blank">github.com/holland97</a></p>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="section summary">
+            <h2>Summary</h2>
+            <div class="project">
+                <p>Showcasing my personal projects to help me transition into a cloud computing role. Enthusiastic and detail-oriented IT professional with a strong foundation in cloud computing and a passion for leveraging technology to solve complex problems. Possess a solid understanding of cloud infrastructure, automation, and DevOps practices. Eager to apply newly acquired skills and knowledge in a dynamic role within a forward-thinking organization. Committed to continuous learning and professional growth in the cloud computing domain.</p>
+            </div>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="section">
+            <h2>Projects</h2>
+            <!-- AWS SFTP Server Project -->
+            <div class="project">
+                <h3>AWS SFTP Server</h3>
+                <ul>
+                    <li>Utilize Terraform to generate IAM policy for S3 bucket interaction</li>
+                    <li>Define IAM role for Transfer Family and attach policy to it</li>
+                    <li>Develop SFTP server using Transfer Family</li>
+                    <li>Create SFTP user account, generate SSH keys, and attach policy</li>
+                    <li>Leverage CircleCI to streamline AWS infrastructure automation</li>
+                </ul>
+                <div class="github-link">
+                    <a href="https://github.com/holland97/AWS-SFTP-Server" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project">
+                <h3>Ansible & Terraform Automated Deployment</h3>
+                <ul>
+                    <li>Design VPC with necessary components using Terraform</li>
+                    <li>Build EC2 instance & enabled SSH traffic with Terraform</li>
+                    <li>Generate SSH key pair for Ansible to use</li>
+                    <li>Create Ansible roles and executed scripts upon server creation</li>
+                    <li>Automated deployment of infrastructure using CircleCI</li>
+                </ul>
+                <div class="github-link">
+                    <a href="https://github.com/holland97/AWS-TF-EC2-AnsibleRoles" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project">
+                <h3>Static Website Hosting</h3>
+                <ul>
+                    <li>Using Terraform, create private S3 bucket and enable static website hosting</li>
+                    <li>Make Cloudfront distribution and Origin Accent Control</li>
+                    <li>Generate S3 bucket policy restricts access only to CloudFront</li>
+                    <li>Register domain name with Route 53</li>
+                    <li>Utilize Certificate Manager to get SSL/TLS certificates</li>
+                    <li>Make use of ChatGPT to generate index.html and error.html file</li>
+                </ul>
+                <div class="github-link">
+                    <a href="https://github.com/holland97/S3-Website-Hosting" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+                    </a>
+                </div>
+            </div>
+
+        <!-- Professional Experience Section -->
+        <div class="section">
+            <h2>Professional Experience</h2>
+            <!-- Experience 1 -->
+            <div class="experience">
+                <h3>IT Support Administrator</h3>
+                <p><strong>Dates:</strong> January 2023 – Present</p>
+                <p>• Setup & troubleshoot VPN issues using network commands on CLI</p>
+                <p>• Connect appropriate patch panel to ports on switch to enable ethernet in office area</p>
+                <p>• Create bash scripts to install applications on machines and store in JumpCloud</p>
+                <p>• Integrate Jira bot with Slack workspace when transitioning to Jira ticketing system</p>
+                <p>• Develop scripts to help with simple day-to-day tasks and troubleshooting</p>
+                <p>• Reconfigure guest network in office to work correctly</p>
+                <p>• Review VPN logs on Ubiquiti console or mac console to troubleshoot VPN issues</p>
+                <p>• Provide licenses to users requesting access to applications</p>
+                <p>• Generate disable USB block policy within CrowdStrike for mac devices</p>
+            </div>
+
+            <!-- Experience 2 -->
+            <div class="experience">
+                <h3>IT Support Specialist</h3>
+                <p><strong>Dates:</strong> May 2019 – October 2022</p>
+                <p>• Setup, install SSL certificates, profiles, and apps for mobile devices through Meraki before deployment</p>
+                <p>• Remote into user's computers to assist with technical issues or perform installations and upgrades</p>
+                <p>• Run scripts within Jenkins to automate account creation of new hires</p>
+                <p>• Perform gpupdates on employee's computers to be updated with current company policies</p>
+                <p>• Assign users to appropriate groups for access within Active Directory or Azure Active Directory</p>
+                <p>• Run packet trace, nslookup, and ping commands to assist with day-to-day needs</p>
+                <p>• Setup access to network printers for new hires and employees</p>
+            </div>
+        </div>
+
+        <!-- Certifications Section -->
+        <div class="section">
+            <h2>Certifications</h2>
+            <div class="certification">
+                <a href="https://cs.lpi.org/caf/Xamman/certification/verify/LPI000619328/qdsmlduney" target="_blank" class="certification-link">
+                    <img src="https://images.credly.com/images/f414bc95-cdcb-4ac9-bdcc-38d3bc6fa386/linkedin_thumb_LPI_Essentials.png" alt="LPI Linux Essentials">
+                </a>
+                <span> July 2024</span>
+            </div>
+            <div class="certification">
+                <a href="https://www.credly.com/badges/5825dd03-8fbb-4ce7-9543-ea3805ab5fb6/linked_in_profile" target="_blank" class="certification-link">
+                    <img src="https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Solutions-Architect-Associate_badge.3419559c682629072f1eb968d59dea0741772c0f.png" alt="AWS Solutions Architect Associate">
+                </a>
+                <span> March 2023</span>
+            </div>
+            <div class="certification">
+                <a href="https://www.credly.com/badges/2d4aeb92-3f12-4d58-9e5f-9dd8f1711aef/linked_in_profile" target="_blank" class="certification-link">
+                    <img src="https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Cloud-Practitioner_badge.634f8a21af2e0e956ed8905a72366146ba22b74c.png" alt="AWS Cloud Practitioner">
+                </a>
+                <span> October 2022</span>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="section">
+            <h2>Skills</h2>
+            <div class="skill">
+                <h3>Technical Skills</h3>
+                <p>• Cloud Technologies: AWS, S3, VPC, EC2, IAM, Transfer Family, Route 53, DynamoDB</p>
+                <p>• DevOps Tools: Terraform, Ansible, CircleCI, Docker</p>
+                <p>• Operating Systems: Linux, MacOS</p>
+                <p>• Collaboration Tools: Jira, Slack, MS Teams</p>
+                <p>• Scripting Languages: Bash</p>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="section">
+            <h2>Education</h2>
+            <div class="education">
+                <h3>Winston-Salem State University</h3>
+                <p><strong>Degree:</strong> Bachelor of Science in Computer Science</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
