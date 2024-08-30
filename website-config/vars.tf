@@ -13,6 +13,6 @@ variable "region" {
 variable "certificate-arn" {
   description = "ARN of my certificate"
   type = string
-  default = "arn:aws:acm:us-east-1:796973480898:certificate/773fb477-66af-4ee6-8ff7-3d70075d45a8"
+  default = "arn:aws:acm:us-east-1:796973480898:certificate/ec5c4058-e902-4547-a3ee-0a4cb78745ef"
   
 }
