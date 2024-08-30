@@ -1,0 +1,56 @@
+version: 2.1
+
+orbs:
+  terraform: circleci/terraform@3.1
+  aws-s3: circleci/aws-s3@4.0.0
+  aws-cli: circleci/aws-cli@5.1.0
+
+jobs:
+  Create State and Lock Resources:
+    executor:
+      name: terraform/default
+    steps:
+      - checkout
+      - terraform/init:
+          path: state-creation/
+      - terraform/fmt:
+          path: state-creation/
+      - terraform/apply:
+          path: state-creation/
+
+  Deploy Website Infrastructure:
+    executor:
+      name: terraform/default
+    steps:
+      - checkout
+      - terraform/init:
+          path: website-config/
+      - terraform/plan:
+          path: website-config/
+      - terraform/apply:
+          path: website-config/
+    
+  Uploading Files To Bucket:
+    docker:
+      - image: circleci/python:3.8
+    steps:
+      - checkout
+      - run:
+          name: Copy files to S3
+          command: |
+            aws s3 cp ./html/ s3://cdn-test-project-bkt --recursive
+
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - Create State and Lock Resources:
+          context: test
+      - Deploy Website Infrastructure:
+          context: test
+          requires:
+            - Create State and Lock Resources
+      - Uploading Files To Bucket:
+          context: test
+          requires:
+            - Deploy Website Infrastructure
