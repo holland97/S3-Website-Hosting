@@ -1,5 +1,5 @@
 resource "aws_cloudfront_origin_access_control" "cf-oac" {
-  name                              = "CF-OAC"
+  name                              = "OAC"
   description                       = "Access Control for private S3 bucket"
   origin_access_control_origin_type = "s3"
   signing_behavior                  = "always"
@@ -20,7 +20,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   comment             = "Some comment"
   default_root_object = "index.html"
 
-   aliases = ["www.rodscloudresume.org", "rodscloudresume.org"]
+   aliases = ["www.rodscloudresume.org"]
 
   default_cache_behavior {
     allowed_methods  = ["GET", "HEAD"]

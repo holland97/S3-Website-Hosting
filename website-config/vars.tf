@@ -1,7 +1,7 @@
 variable "static-bkt" {
   description = "Name of private bucket used for static website hosting"
   type        = string
-  default     = "www.rodscloudresume.org"
+  default     = "rodscloudresume.org"
 }
 
 variable "region" {
@@ -13,6 +13,6 @@ variable "region" {
 variable "certificate-arn" {
   description = "ARN of my certificate"
   type = string
-  default = "arn:aws:acm:us-east-1:796973480898:certificate/ec5c4058-e902-4547-a3ee-0a4cb78745ef"
+  default = "arn:aws:acm:us-east-1:796973480898:certificate/b72aa12a-5c7b-4657-aa5e-421b77c1f3c9"
   
 }
